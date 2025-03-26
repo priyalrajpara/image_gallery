@@ -1,0 +1,136 @@
+    header
+{
+    background-color: rgb(202, 52, 243);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: antiquewhite;
+}
+.options
+{
+    padding: 0px;
+    display: flex;
+    justify-content:center;
+    align-items: normal;
+    margin-bottom: 10px;
+}
+.options button
+{
+    background-color: rgb(224, 155, 243); 
+    /* background-clip: padding-box; */
+     /* background-size: contain; */
+    box-sizing: border-box; 
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 50px;
+    border: none;
+    margin-inline: 19px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: rgb(251, 250, 249);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.options button:hover
+{
+    /* background-color:rgb(219, 116, 248); */
+    background-color: rgb(202, 52, 243);
+    cursor:pointer;
+    
+}
+.options button.active
+{
+    background-color: rgb(202, 52, 243);
+    background-clip: border-box;
+}
+.gallery img
+{
+    display: block;
+    height: 20%;
+    /* justify-content: flex-end; */
+    width: 94%;
+    border-radius: 15px;
+    break-inside: avoid;
+    margin-bottom: 30px;
+}
+.gallery
+{
+    column-gap: 5px;
+    column-count: 5;
+}
+
+.img-cont
+ {
+    position: relative;
+    /* display: inline-block; */
+    display: inline; 
+}
+
+.img-cont img 
+{
+     display: block; 
+    transition: filter 0.3s;
+}
+
+.img-cont .des 
+{
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* background-color: rgba(249, 237, 237, 0.5); */
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-style: italic;
+    font-size: larger;
+}   
+
+.img-cont:hover img
+ {
+    filter: blur(3px);
+}
+
+.img-cont:hover .des
+ {
+    opacity: 1;
+}
+    
+@media (max-width: 1200px)
+{
+    .gallery
+    {
+        column-count: 4;
+    }
+}
+@media (max-width: 1000px)
+{
+    .gallery
+    {
+        column-count: 3;
+    }
+}
+@media (max-width: 800px)
+{
+    .gallery
+    {
+        column-count: 2;
+    }
+}
+@media (max-width: 500px)
+{
+    .gallery
+    {
+        column-count: 1;
+    }
+}
